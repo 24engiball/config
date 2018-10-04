@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+
+  frontend:
+    image: codeerror/task_frontend:0.11
+    ports:
+      - 4444:80
+    depends_on:
+      - backend
+
+  backend:
+    image: codeerror/task_api:0.13
+    environment:
+      - DB_HOST=database
+      - DB_USERNAME=task
+      - DB_DATABASE=task
+      - DB_PASSWORD=secret
+    ports:
+      - 5555:80
+    depends_on:
+      - database
+
+  database:
+    image: mysql:5.7
+    environment:
+      - MYSQL_DATABASE=task
+      - MYSQL_USER=task
+      - MYSQL_PASSWORD=secret
+      - MYSQL_ROOT_PASSWORD=secret
+    ports:
+      - 3306:3306
+
