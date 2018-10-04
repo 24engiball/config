@@ -3,14 +3,14 @@ version: '3'
 services:
 
   frontend:
-    image: engiball/taskapp:latest
+    image: engiball/taskapp:0.12
     ports:
       - 4444:80
     depends_on:
       - backend
 
   backend:
-    image: engiball/taskapi:latest
+    image: engiball/taskapi:0.13
     environment:
       - DB_HOST=database
       - DB_USERNAME=task
