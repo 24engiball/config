@@ -10,7 +10,7 @@ services:
       - backend
 
   backend:
-    image: engiball/taskapi:0.13
+    image: engiball/taskapi:0.14
     environment:
       - DB_HOST=database
       - DB_USERNAME=task
