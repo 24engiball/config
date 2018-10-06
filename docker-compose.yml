@@ -3,14 +3,14 @@ version: '3'
 services:
 
   frontend:
-    image: engiball/taskapp:0.12
+    image: engiball/taskapp:0.99
     ports:
       - 4444:80
     depends_on:
       - backend
 
   backend:
-    image: engiball/taskapi:0.14
+    image: engiball/taskapi:0.99
     environment:
       - DB_HOST=database
       - DB_USERNAME=task
@@ -20,6 +20,7 @@ services:
       - 5555:80
     depends_on:
       - database
+    command: ./setup_database.sh
 
   database:
     image: mysql:5.7
