@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-compose exec backend ./test.sh
+sudo docker-compose exec backend ./test.sh

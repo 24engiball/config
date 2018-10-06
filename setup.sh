@@ -1,5 +1,7 @@
 #!/bin/bash
- docker-compose down
- docker-compose rm
- docker-compose up -d
+
+sudo docker-compose down
+sudo docker volume prune
+sudo docker-compose rm
+sudo docker-compose up -d
 
