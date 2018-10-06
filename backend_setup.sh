@@ -1,2 +1,2 @@
 #!/bin/bash
-docker-compose exec backend ./setup_database.sh
+docker-compose exec backend ./test.sh
