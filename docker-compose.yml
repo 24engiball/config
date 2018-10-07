@@ -20,7 +20,6 @@ services:
       - 5555:80
     depends_on:
       - database
-    #command: ./test.sh
 
   database:
     image: mysql:5.7
