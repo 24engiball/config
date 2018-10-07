@@ -20,7 +20,8 @@ services:
       - 5555:80
     depends_on:
       - database
-    command: ./test.sh
+    tty: true
+    #command: "php test.php" 
 
   database:
     image: mysql:5.7
